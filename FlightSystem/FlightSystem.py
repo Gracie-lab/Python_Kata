@@ -16,20 +16,40 @@ class AirPlane():
 
 
 class Customer():
+
+    has_pending_request = False
+    name = " "
+
     def __init__(self, name):
         self.name = name
 
     def book_a_seat():
+        get_booking_information()
+        has_pending_request = True
 
 
-
-    def fill_booking_information(self, location):
+    def fill_booking_information(self, location, name):
         self.location = location
+        self.name = name
 
     def get_booking_information():
         information = [
-            "name" : self.name
+            "name" : self.name,
             "location" : self.location
         ]
 
+
+class Admin():
+
+    def assignSeat():
+
+        Customer.get_booking_information()
+
+        if not AirPlane.is_seat_available():
+            passengers.append(Customer.name)
+        else:
+            return AirPlane.is_seat_available()
+
+    
+        
         
